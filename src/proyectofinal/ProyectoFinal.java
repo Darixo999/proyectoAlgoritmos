@@ -1,0 +1,37 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package proyectofinal;
+
+import java.util.Scanner;
+import static proyectofinal.bin.proyectoFinal;
+
+/**
+ *
+ * @author Usuario
+ */
+public class ProyectoFinal {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+     
+        proyectoFinal();
+            
+        }
+                  
+              }
+                
+        
+        
+            
+         
+    
+    
+    
+
+
+
