@@ -19,9 +19,11 @@ import java.util.List;
         public static void proyectoFinal() {
 
             Scanner consola = new Scanner(System.in);
-
+            //Ventas finales    
             int totalVentas = 0;
+            //Total de productos que se vendieron 
             int totalProductosVendidos = 0;
+            //Cantidad total de dinero que se adquirio al final de la venta realizada
             double dineroTotalVendido = 0.0;
             int ventasEfectivo = 0;
             int ventasTarjeta = 0;
