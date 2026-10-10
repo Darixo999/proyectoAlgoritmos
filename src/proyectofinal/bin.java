@@ -25,15 +25,25 @@ import java.util.List;
             int totalProductosVendidos = 0;
             //Cantidad total de dinero que se adquirio al final de la venta realizada
             double dineroTotalVendido = 0.0;
+            //Csntidad total de ventas que se realizaron en efectivo 
             int ventasEfectivo = 0;
+            //Cantidad de ventas que se registraron con tarjeta
             int ventasTarjeta = 0;
+            //Cantidad de ventas que se realizaron por medio de una transferencia
             int ventasTransferencia = 0;
+            //Acumulacion de dinero en efectivo que se obtuvo por las ventas en efectivo
             double dineroEfectivo = 0;
+            //Acumulacion de dinero de los pagos realizados con tarjeta
             double dineroTarjeta = 0;
+            //Acumulacion de dinero de los pagos realizados por medio de transferencia
             double dineroTransferencia = 0;
+            //Determina cual es la venta con mayor valor que se ha registrado
             double ventaMayor = 0;
+            //Determina cual es la venta con menor valor que se ha registrado
             double ventaMenor = 0;
+            //Opciones para el menu
             int opcionMenu = 0;
+            //Para el registro de dinero en efectivo, ir descontando conforme se vaya ingresando capital
             double abonoFaltante = 0;
 
             do {
