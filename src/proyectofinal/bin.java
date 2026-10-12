@@ -70,7 +70,7 @@ import java.util.List;
                     case 1:
 
                     
-                        System.out.println("\n Ha seleccionado Registrar una venta");
+                        System.out.println("\n                                                           Ha seleccionado Registrar una venta");
 
                         int productosC = 0;
 
