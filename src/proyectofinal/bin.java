@@ -72,19 +72,19 @@ import java.util.List;
                     case 1:
 
                     
-                        System.out.println("\n                                                           Ha seleccionado Registrar una venta");
+                        System.out.println("\n                                                                Ha seleccionado Registrar una venta");
 
                         int productosC = 0;
 
                         while (productosC <= 0) {
 
-                            System.out.println("\n Ingrese la cantidad de productos a registrar: ");
+                            System.out.println("\n                                                                Ingrese la cantidad de productos a registrar: ");
                             productosC = consola.nextInt();
                             consola.nextLine();
 
                             if (productosC <= 0) {
 
-                                System.out.println("La cantidad debe ser mayor a cero");
+                                System.out.println("                                                                La cantidad debe ser mayor a cero");
 
                             }
 
@@ -94,32 +94,32 @@ import java.util.List;
                         int totalProductosVentaActual = 0;
 
                         for (int i = 0; i < productosC; i++) {
-                            System.out.println("\n Producto No. " + (i + 1));
+                            System.out.println("\n                                                                Producto No. " + (i + 1));
                         
 
-                        System.out.print("Ingrese el codigo del producto: ");
+                        System.out.print("                                                                Ingrese el codigo del producto: ");
                         String codigo = consola.nextLine(); 
 
-                        System.out.print("Ingrese el nombre del producto: ");
+                        System.out.print("                                                                Ingrese el nombre del producto: ");
                         String nombreProducto = consola.nextLine();
 
                         double precio = 0.0;
                         
                         while (precio <= 0) {
-                            System.out.print("Ingrese el precio del producto Q. ");
+                            System.out.print("                                                                Ingrese el precio del producto Q. ");
                             precio = consola.nextDouble();
                             if (precio <= 0) {
-                                System.out.println("No valido, el precio debe ser mayor a 0");
+                                System.out.println("                                                                No valido, el precio debe ser mayor a 0");
                             }
                         }
                         
 
                         int cantidad = 0;
                         while (cantidad <= 0) {
-                            System.out.print("Ingrese la cantidad del producto: ");
+                            System.out.print("                                                                Ingrese la cantidad del producto: ");
                             cantidad = consola.nextInt();
                             if (cantidad <= 0) {
-                                System.out.println("No valido, la cantidad debe ser mayor a cero.");
+                                System.out.println("                                                                No valido, la cantidad debe ser mayor a cero.");
                             }
                         }
                         consola.nextLine();
@@ -150,19 +150,19 @@ import java.util.List;
                 double totalFactura = montoConDescuento + iva;
                  
                         
-                System.out.println("\n El subtotal es de:  Q. " + subtotalVentaActual);
-                System.out.println(" El total es de :      Q. " + totalFactura);
+                System.out.println("\n                                                                El subtotal es de:  Q. " + subtotalVentaActual);
+                System.out.println("                                                                El total es de :      Q. " + totalFactura);
                 
                 int formaPago = 0;
                 while (formaPago < 1 || formaPago > 3) {
-                    System.out.println("\nFormas de pago disponibles:");
-                    System.out.println("1. Efectivo");
-                    System.out.println("2. Tarjeta");
-                    System.out.println("3. Transferencia");
-                    System.out.print("Seleccione la forma de pago: ");
+                    System.out.println("\n                                                                Formas de pago disponibles:");
+                    System.out.println("                                                                1. Efectivo");
+                    System.out.println("                                                                2. Tarjeta");
+                    System.out.println("                                                                3. Transferencia");
+                    System.out.print("                                                                Seleccione la forma de pago: ");
                     formaPago = consola.nextInt();
                     if (formaPago < 1 || formaPago > 3) {
-                        System.out.println("No valido, opcion de pago no disponible.");
+                        System.out.println("                                                                No valido, opcion de pago no disponible.");
                     }
                 }
                 consola.nextLine();
@@ -177,12 +177,12 @@ import java.util.List;
   
                         while (efectivoRecibido < totalFactura) {
                             
-                            System.out.print("Monto a pagar: Q. " + totalFactura );
-                            System.out.println("\n Ingrese el efectivo recibido: Q. ");
+                            System.out.print("                                                                Monto a pagar: Q. " + totalFactura );
+                            System.out.println("\n                                                                Ingrese el efectivo recibido: Q. ");
                             efectivoRecibido = consola.nextDouble();
                             
                             while (efectivoRecibido < totalFactura) {
-                                System.out.println("Cantidad de efectivo insuficiente, aun queda un saldo restante de : Q" + (totalFactura - efectivoRecibido));
+                                System.out.println("                                                                Cantidad de efectivo insuficiente, aun queda un saldo restante de : Q" + (totalFactura - efectivoRecibido));
                                 abonoFaltante = consola.nextDouble();
                                 
                                 efectivoRecibido = efectivoRecibido + abonoFaltante;
@@ -209,18 +209,18 @@ import java.util.List;
                 }
 
         
-                System.out.println("\n          Resumen de la compra            ");
+                System.out.println("\n                                                                          Resumen de la compra            ");
                 
-                System.out.println("Cantidad de productos: " + totalProductosVentaActual);
-                System.out.printf("Subtotal:               Q%.2f\n", subtotalVentaActual);
-                System.out.printf("Descuento aplicado:     Q%.2f (%.0f%%)\n", montoDescuento, (porcentajeDescuento * 100));
-                System.out.printf("IVA :                   Q%.2f\n", iva);
+                System.out.println("                                                                Cantidad de productos: " + totalProductosVentaActual);
+                System.out.printf("                                                                Subtotal:               Q%.2f\n", subtotalVentaActual);
+                System.out.printf("                                                                Descuento aplicado:     Q%.2f (%.0f%%)\n", montoDescuento, (porcentajeDescuento * 100));
+                System.out.printf("                                                                IVA :                   Q%.2f\n", iva);
                         System.out.println(" ");
-                System.out.printf("Total:                  Q%.2f\n", totalFactura);
-                System.out.println("Forma de pago:            " + textoFormaPago);
+                System.out.printf("                                                                Total:                  Q%.2f\n", totalFactura);
+                System.out.println("                                                                Forma de pago:            " + textoFormaPago);
                 if (formaPago == 1) {
-                    System.out.printf("Efectivo recibido:  Q%.2f\n", efectivoRecibido);
-                    System.out.printf("Cambio:             Q%.2f\n", cambio);
+                    System.out.printf("                                                                Efectivo recibido:  Q%.2f\n", efectivoRecibido);
+                    System.out.printf("                                                                Cambio:             Q%.2f\n", cambio);
                 }
                 
 
@@ -244,41 +244,41 @@ import java.util.List;
                                 case 2: 
                     
                     
-                    System.out.println("\n           Consultar caja            ");
+                    System.out.println("\n                                                                           Consultar caja            ");
               
-                    System.out.println(" Ventas realizadas: " + totalVentas);
-                    System.out.println(" Productos vendidos: " + totalProductosVendidos);
-                    System.out.printf(" Total vendido en caja: Q.%.2f ", dineroTotalVendido);
+                    System.out.println("                                                                Ventas realizadas: " + totalVentas);
+                    System.out.println("                                                                Productos vendidos: " + totalProductosVendidos);
+                    System.out.printf("                                                                Total vendido en caja: Q.%.2f ", dineroTotalVendido);
                    
-                    System.out.printf("\n Ventas en Efectivo:      %d (Q%.2f)\n", ventasEfectivo, dineroEfectivo);
-                    System.out.printf(" Ventas con Tarjeta:       %d (Q%.2f)\n", ventasTarjeta, dineroTarjeta);
-                    System.out.printf(" Ventas por Transferencia: %d (Q%.2f)\n", ventasTransferencia, dineroTransferencia);
+                    System.out.printf("\n                                                                Ventas en Efectivo:      %d (Q%.2f)\n", ventasEfectivo, dineroEfectivo);
+                    System.out.printf("                                                                Ventas con Tarjeta:       %d (Q%.2f)\n", ventasTarjeta, dineroTarjeta);
+                    System.out.printf("                                                                Ventas por Transferencia: %d (Q%.2f)\n", ventasTransferencia, dineroTransferencia);
                     
            
                     break;
                     
                 case 3:
                     System.out.println("\n");
-                    System.out.println("             Estadisticas               ");
+                    System.out.println("                                                                             Estadisticas               ");
                   
                     
                     if (totalVentas == 0) {
                         
-                        System.out.println("No existen ventas registradas.");
+                        System.out.println("                                                                No existen ventas registradas.");
                         
                     } else {
                         
                         double promedioDinero = dineroTotalVendido / totalVentas;
-                        System.out.println("\n Numero total de ventas: " + totalVentas);
-                        System.out.println(" Total de productos vendidos:\n " + totalProductosVendidos);
-                        System.out.printf(" Total de dinero vendido: Q.%.2f\n ", dineroTotalVendido);
-                        System.out.printf(" Promedio de dinero por venta: Q.%.2f\n ", promedioDinero);
-                        System.out.println(" Cantidad de ventas por cada forma de pago:\n");
-                        System.out.println("    - Efectivo: " + ventasEfectivo);
-                        System.out.println("    - Tarjeta: " + ventasTarjeta);
-                        System.out.println("    - Transferencia: " + ventasTransferencia);
-                        System.out.printf(" Venta mayor: Q%.2f \n", ventaMayor);
-                        System.out.printf(" Venta menor: Q%.2f ", ventaMenor);
+                        System.out.println("\n                                                                Numero total de ventas: " + totalVentas);
+                        System.out.println("                                                                Total de productos vendidos:\n " + totalProductosVendidos);
+                        System.out.printf("                                                                Total de dinero vendido: Q.%.2f\n ", dineroTotalVendido);
+                        System.out.printf("                                                                Promedio de dinero por venta: Q.%.2f\n ", promedioDinero);
+                        System.out.println("                                                                Cantidad de ventas por cada forma de pago:\n");
+                        System.out.println("                                                                    - Efectivo: " + ventasEfectivo);
+                        System.out.println("                                                                    - Tarjeta: " + ventasTarjeta);
+                        System.out.println("                                                                    - Transferencia: " + ventasTransferencia);
+                        System.out.printf("                                                                Venta mayor: Q%.2f \n", ventaMayor);
+                        System.out.printf("                                                                Venta menor: Q%.2f ", ventaMenor);
                     }
                     
                     break;
@@ -288,13 +288,13 @@ import java.util.List;
          
             
               System.out.flush();
-                System.out.println("Saliendo...");
-
+                System.out.println("                                                                Saliendo...");
+                break;
                 
                         
             default:
                 
-                System.out.println("Opcion no valida");
+                System.out.println("                                                                Opcion no valida");
                 
                     
                 }
