@@ -45,7 +45,9 @@ import java.util.List;
             int opcionMenu = 0;
             //Para el registro de dinero en efectivo, ir descontando conforme se vaya ingresando capital
             double abonoFaltante = 0;
-
+            //Para estadisticas
+            int venta = 0;
+            
             do {
 
                 System.out.println("====================================================================================================================================================================================");
