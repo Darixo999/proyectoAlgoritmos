@@ -46,7 +46,7 @@ import java.util.List;
             //Para el registro de dinero en efectivo, ir descontando conforme se vaya ingresando capital
             double abonoFaltante = 0;
             //Para estadisticas
-            int venta = 0;
+ 
             
             do {
 
