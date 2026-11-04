@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author Usuario
+ * @author Estuardo_Alvarez 1890 26 8329
  */
   
 
@@ -46,7 +46,7 @@ import java.util.List;
             //Para el registro de dinero en efectivo, ir descontando conforme se vaya ingresando capital
             double abonoFaltante = 0;
             //Para estadisticas
- 
+            String productosAlmacenados = " ";
             
             do {
 
@@ -92,7 +92,7 @@ import java.util.List;
                         
                         double subtotalVentaActual = 0.0;
                         int totalProductosVentaActual = 0;
-
+                        String conteoProductos = " ";
                         for (int i = 0; i < productosC; i++) {
                             System.out.println("\n                                                                Producto No. " + (i + 1));
                         
@@ -101,8 +101,10 @@ import java.util.List;
                         String codigo = consola.nextLine(); 
 
                         System.out.print("                                                                Ingrese el nombre del producto: ");
+                        
                         String nombreProducto = consola.nextLine();
-
+                             conteoProductos += nombreProducto + ", "; 
+                             
                         double precio = 0.0;
                         
                         while (precio <= 0) {
@@ -112,7 +114,7 @@ import java.util.List;
                                 System.out.println("                                                                No valido, el precio debe ser mayor a 0");
                             }
                         }
-                        
+                   
 
                         int cantidad = 0;
                         while (cantidad <= 0) {
@@ -128,7 +130,7 @@ import java.util.List;
                          
                         subtotalVentaActual += subtotalProducto;
                         totalProductosVentaActual += cantidad;
-                        
+                        productosAlmacenados += conteoProductos;
                         
                         
                         }
@@ -178,7 +180,7 @@ import java.util.List;
                         while (efectivoRecibido < totalFactura) {
                             
                             System.out.print("                                                                Monto a pagar: Q. " + totalFactura );
-                            System.out.println("\n                                                                Ingrese el efectivo recibido: Q. ");
+                            System.out.printf("\n                                                                Ingrese el efectivo recibido: Q. ");
                             efectivoRecibido = consola.nextDouble();
                             
                             while (efectivoRecibido < totalFactura) {
@@ -212,6 +214,7 @@ import java.util.List;
                 System.out.println("\n                                                                          Resumen de la compra            ");
                 
                 System.out.println("                                                                Cantidad de productos: " + totalProductosVentaActual);
+                System.out.println("                                                                Nombre de los productos adquiridos: " + conteoProductos);
                 System.out.printf("                                                                Subtotal:               Q%.2f\n", subtotalVentaActual);
                 System.out.printf("                                                                Descuento aplicado:     Q%.2f (%.0f%%)\n", montoDescuento, (porcentajeDescuento * 100));
                 System.out.printf("                                                                IVA :                   Q%.2f\n", iva);
@@ -248,6 +251,7 @@ import java.util.List;
               
                     System.out.println("                                                                Ventas realizadas: " + totalVentas);
                     System.out.println("                                                                Productos vendidos: " + totalProductosVendidos);
+                    System.out.println("                                                                Nombre de los productos vendidos: " + productosAlmacenados);
                     System.out.printf("                                                                Total vendido en caja: Q.%.2f ", dineroTotalVendido);
                    
                     System.out.printf("\n                                                                Ventas en Efectivo:      %d (Q%.2f)\n", ventasEfectivo, dineroEfectivo);
